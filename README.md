@@ -1,4 +1,4 @@
-# zmk-corne
+# allie-cat-corne
 
 ZMK firmware for Allie's AliExpress Corne keyboard (Nice!Nano v2 × 2, non-standard PCB pinout, right-half Azoteq TPS43 touchpad).
 
