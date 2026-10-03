@@ -12,6 +12,7 @@ manifest:
       import: app/west.yml
     - name: zmk-driver-azoteq-iqs5xx
       remote: AYM1607
-      revision: main
+      # Pinned to a commit (was: main). Bump deliberately and re-test the touchpad on hardware.
+      revision: 27321f0232b50f0af31eb27ff97d539933467ea4
   self:
     path: config
