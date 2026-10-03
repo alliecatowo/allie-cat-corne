@@ -27,6 +27,14 @@ Defined in `build.yaml`:
 | `corne_right_debug` | Right half + `zmk-usb-logging` snippet. Flash this for touchpad/I2C debugging. |
 | `settings_reset` | Wipes BT pairings + NVS. Only flash if halves can't re-pair. |
 
+## Releases and CI
+
+Every push builds all targets in CI (`Build ZMK firmware`, using ZMK v0.3). Pushing a `v*` tag, or running the
+`Release firmware` workflow by hand, builds again and attaches the UF2s (`corne_left_studio`, `corne_right`,
+`corne_right_debug`, `settings_reset`) to a GitHub release:
+[Releases](https://github.com/alliecatowo/allie-cat-corne/releases). The Azoteq driver is pinned to a commit in
+`config/west.yml`; bump it deliberately and re-test the touchpad.
+
 ## ⚠️ After every flash: power-cycle BOTH halves
 
 **Unplug both halves' USB → wait 2s → replug.** DFU reboots the MCU but not
